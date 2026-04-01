@@ -1,0 +1,158 @@
+/* Configuração Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* Gradiente fixo para não cortar ao rolar a página */
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha no topo para a dashboard fluir */
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Efeito de Vidro (Glassmorphism) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  padding: 30px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Centralização do Login */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.login-card {
+  max-width: 420px;
+}
+
+/* Layout da Dashboard */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr; /* Form na esquerda, lista na direita */
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Grid de Cards de Estudo */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Formulário e Inputs */
+.form-aesthetic .input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-aesthetic label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.form-aesthetic input, 
+.form-aesthetic select, 
+.form-aesthetic textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: white;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Acessibilidade: Foco visível */
+input:focus, button:focus, select:focus, textarea:focus {
+  outline: 3px solid #6c5ce7;
+  outline-offset: 2px;
+}
+
+/* Botões */
+button[type="submit"] {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #5d4de0;
+}
+
+/* Títulos principais mais fortes */
+h1, h2, h3 {
+  color: #2d3436 !important; /* Um cinza quase preto, muito mais legível */
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* Ajuda a destacar do fundo */
+}
+
+/* Textos de boas-vindas e frases de efeito */
+p {
+  color: #4b4b4b !important;
+  font-weight: 500;
+}
+
+/* Labels do formulário (Matéria, Nível, etc) */
+.form-aesthetic label {
+  color: #3d3d3d !important;
+  font-weight: 700; /* Negrito para facilitar a identificação do campo */
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.form-aesthetic input, 
+.form-aesthetic select, 
+.form-aesthetic textarea {
+  background: rgba(255, 255, 255, 0.9) !important; /* Quase branco sólido */
+  border: 2px solid rgba(108, 92, 231, 0.2); /* Borda suave mas visível */
+  color: #1a1a1a !important; /* Texto que você digita fica bem escuro */
+  font-weight: 500;
+}
+
+/* Quando o usuário clica no campo (Foco) */
+.form-aesthetic input:focus, 
+.form-aesthetic textarea:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.15);
+  background: #ffffff !important; /* Fica totalmente branco ao digitar */
+}

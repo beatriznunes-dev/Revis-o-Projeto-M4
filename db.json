@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "username": "pessoa123",
+      "password": "123456",
+      "id": "6gkMZmBE60c"
+    },
+    {
+      "username": "Bea123456",
+      "password": "123456",
+      "id": "sihqcrmx6lE"
+    }
+  ],
+  "estudos": [
+    {
+      "id": "1",
+      "materia": "React TypeScript",
+      "nivelDificuldade": "Médio",
+      "qualDificuldade": "Configurar o ambiente",
+      "dataRevisao": "2026-04-05",
+      "entendimento": "Consegui rodar o Vite e criar o db.json"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
